@@ -42,7 +42,8 @@ public class Nain {
      * @param nb Le nombre de pintes
      */
     public void boirePintes(int nb){
-        Ta += nb * ((500*0.06*0.8)/(0.7*poids));
+        Pinte p = new Pinte();
+        Ta += nb * ((p.getVolume()*p.getDegre()*0.8)/(0.7*poids));
     }
     /**
      * Fait redescendre l'alcoolémie durant le travail

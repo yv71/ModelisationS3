@@ -17,4 +17,13 @@ public class Pinte {
         volume = 500;
         degre = 0.06;
     }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public double getDegre() {
+        return degre;
+    }
+    
 }
