@@ -17,11 +17,14 @@ public class AlaMine {
     public static void main(String[] args) {
         // TODO code application logic here
         Nain n = new Nain();
-        boolean b = true;
-        while(b){
+        Temps t = new Temps();
+        for(int i=0;i<500;i++){
             n.getEtat().agir();
-            System.out.println(n.getNom()+"\t"+n.getEtat().toString());
+            System.out.println(t.toString());
+            System.out.println(n.toString());
             n.setEtat(n.getEtat().transition());
+            t.passeTranche();
+            
         }
     }
     

@@ -111,5 +111,7 @@ public class Nain {
         this.etat = etat;
     }
     
-    
+    public String toString(){
+        return this.getNom()+" :\t\""+this.getEtat().toString()+"\"";
+    }
 }
