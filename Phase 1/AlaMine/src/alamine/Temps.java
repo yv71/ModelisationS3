@@ -10,9 +10,9 @@ package alamine;
  * @author Damien
  */
 public class Temps {
-    private static int jour;
-    private static int heure;
-    private static int minute;
+    private int jour;
+    private int heure;
+    private int minute;
     
     public Temps(){
         reset();
@@ -32,6 +32,11 @@ public class Temps {
         }
     }
     public void reset(){
+        jour=0;
+        heure=0;
+        minute=0;
+    }
+    public void resetHorloge(){
         jour=1;
         heure=0;
         minute=0;

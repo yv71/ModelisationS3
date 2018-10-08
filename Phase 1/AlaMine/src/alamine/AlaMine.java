@@ -18,11 +18,14 @@ public class AlaMine {
         // TODO code application logic here
         Nain n = new Nain();
         Temps t = new Temps();
-        
-        for(int i=0;i<500;i++){
+        t.resetHorloge();
+        for(int i=0;i<(24*3);i++){
             n.getEtat().agir();
+            
             System.out.println(t.toString());
             System.out.println(n.toString());
+            System.out.println(n.getCptTaverne().toString("Taverne"));
+            
             n.setEtat(n.getEtat().transition());
             t.passeTranche();
             
