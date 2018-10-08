@@ -20,12 +20,16 @@ public class Nain {
     private State etat;
     private final static double dT = 0.15; //Diminution du taux d'alcool quand il travaille 
     private final static double dA = 0.10; //Diminution du taux d'alcool quand il ne travaille pas
+    private Temps cptMine;
+    private Temps cptTaverne;
     
     public Nain(){
         Ta = 0;
         nom = "Gimli";
         this.poids = 102;
         this.etat = new State_Travail(this);
+        this.cptMine = new Temps();
+        this.cptTaverne = new Temps();
     }
     
     public void boirePinte(){
@@ -109,6 +113,14 @@ public class Nain {
 
     public void setEtat(State etat) {
         this.etat = etat;
+    }
+
+    public Temps getCptMine() {
+        return cptMine;
+    }
+
+    public Temps getCptTaverne() {
+        return cptTaverne;
     }
     
     public String toString(){

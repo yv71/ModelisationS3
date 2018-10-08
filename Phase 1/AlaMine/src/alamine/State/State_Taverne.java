@@ -36,6 +36,7 @@ public class State_Taverne extends State{
     public void agir() {
         this.getNain().boirePintes(3);
         this.getNain().diminuerTaPause();
+        this.getNain().getCptTaverne().passeTranche();
     }
 
     @Override

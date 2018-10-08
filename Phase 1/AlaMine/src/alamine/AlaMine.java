@@ -18,6 +18,7 @@ public class AlaMine {
         // TODO code application logic here
         Nain n = new Nain();
         Temps t = new Temps();
+        
         for(int i=0;i<500;i++){
             n.getEtat().agir();
             System.out.println(t.toString());
