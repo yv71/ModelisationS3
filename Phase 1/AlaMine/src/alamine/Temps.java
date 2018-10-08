@@ -17,10 +17,16 @@ public class Temps {
     public Temps(){
         reset();
     }
+    /**
+     * Fait passer le temps de 20 minutes
+     */
     public void passeTranche(){
         minute+=20;
         update();
     }
+    /**
+     * Actualise le temps et convertit les minutes/heures en heures/jours
+     */
     private void update(){
         if(minute>=60){
             heure+=minute/60;
@@ -31,11 +37,17 @@ public class Temps {
             heure=heure%24;
         }
     }
+    /**
+     * Passe tous les attributs à 0
+     */
     public void reset(){
         jour=0;
         heure=0;
         minute=0;
     }
+    /**
+     * Passe les heures et les minutes à 0 et le jour à 1
+     */
     public void resetHorloge(){
         jour=1;
         heure=0;
@@ -44,6 +56,11 @@ public class Temps {
     public String toString(){
         return "Jour "+jour+" : "+heure+":"+minute;
     }
+    /**
+     * 
+     * @param s Mine pour le cptMine et Taverne pour le cptTaverne
+     * @return 
+     */
     public String toString(String s){
         String res=null;
         if(s.equalsIgnoreCase("Mine")){
