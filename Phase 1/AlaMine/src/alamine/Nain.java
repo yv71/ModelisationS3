@@ -31,15 +31,22 @@ public class Nain {
         this.cptMine = new Temps();
         this.cptTaverne = new Temps();
     }
-    
+    /**
+     * Fait boire une pinte au nain
+     */
     public void boirePinte(){
         Ta += ((500*0.06*0.8)/(0.7*poids));
     }
-    
+    /**
+     * Fait boire nb pinte(s) au nain
+     * @param nb Le nombre de pintes
+     */
     public void boirePintes(int nb){
         Ta += nb * ((500*0.06*0.8)/(0.7*poids));
     }
-
+    /**
+     * Fait redescendre l'alcoolémie durant le travail
+     */
     public void diminuerTaTravail(){
         if (this.Ta-dT<0){
             Ta = 0;
@@ -48,7 +55,9 @@ public class Nain {
             Ta -= dT;
         }
     }
-    
+    /**
+     * Fait redescendre l'alcoolémie en dehors du travail
+     */
     public void diminuerTaPause(){
         if (this.Ta-dA<0){
             Ta = 0;
@@ -57,11 +66,16 @@ public class Nain {
             Ta -= dA;
         }
     }
-    
+    /**
+     * Reset l'alcoolémie
+     */
     public void dodo(){
         this.Ta = 0;
     }
-    
+    /**
+     * La vie des nains est dure et les pioches peuvent casser 
+     * @return Si le nain casse sa pioche ou non
+     */
     public boolean cassePioche(){
         boolean res = false;
         double prob;
@@ -73,7 +87,10 @@ public class Nain {
         }
         return res;
     }
-    
+    /**
+     * Le travail ca fatigue, direction la taverne
+     * @return Si le nain arrive à échapper aux gardes et aller à la taverne
+     */
     public boolean fuiteTaverne(){
         boolean res = false;
         Random r = new Random();
@@ -83,7 +100,10 @@ public class Nain {
         }
         return res;
     }
-    
+    /**
+     * Le travail d'un tavernier est de servir des pintes et des pains
+     * @return Si le nain se bat avec le tavernier
+     */
     public boolean taperTavernier(){
         boolean res = false;
         double prob = 0.05+(0.15*this.getTa());
@@ -94,19 +114,28 @@ public class Nain {
         }
         return res;
     }
-    
+    /**
+     * Un nain sobre n'est pas un vrai nain
+     * @return L'alcoolémie
+     */
     public double getTa() {
         return Ta;
     }
-
+    
     public String getNom() {
         return nom;
     }
-
+    /**
+     * A votre discrétion messire
+     * @return Le poids
+     */
     public int getPoids() {
         return poids;
     }
-
+    /**
+     * Ou suis-je ?
+     * @return L'état de l'automate
+     */
     public State getEtat() {
         return etat;
     }
