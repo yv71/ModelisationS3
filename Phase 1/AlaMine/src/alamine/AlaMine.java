@@ -5,6 +5,10 @@
  */
 package alamine;
 
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author yv066840
@@ -14,14 +18,14 @@ public class AlaMine {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, InterruptedException {
         // TODO code application logic here
         Nain n = new Nain();
         Temps t = new Temps();
         t.resetHorloge();
-        for(int i=0;i<(24*3);i++){
+        Lecteur.play("Ressources/DiggyDiggyHole.mp3", 20);        
+        for(int i=0;i<(24*1000*3);i++){
             n.getEtat().agir();
-            
             System.out.println(t.toString());
             System.out.println(n.toString());
             if(i%(24*3)==0){
@@ -29,8 +33,8 @@ public class AlaMine {
                 System.out.println(n.getCptMine().toString("Mine"));
             }
             n.setEtat(n.getEtat().transition());
-            t.passeTranche();
-            
+            t.passeTranche();            
+            TimeUnit.MILLISECONDS.sleep((long) 1.4);
         }
     }
     
