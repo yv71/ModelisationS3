@@ -24,7 +24,7 @@ public class AlaMine {
         Temps t = new Temps();
         t.resetHorloge();
         Lecteur.play("Ressources/DiggyDiggyHole.mp3", 20);        
-        for(int i=0;i<(24*1000*3);i++){
+        for(int i=0;i<(24*200*3);i++){
             n.getEtat().agir();
             System.out.println(t.toString());
             System.out.println(n.toString());
@@ -34,8 +34,10 @@ public class AlaMine {
             }
             n.setEtat(n.getEtat().transition());
             t.passeTranche();            
-            TimeUnit.MILLISECONDS.sleep((long) 1.4);
+            TimeUnit.MILLISECONDS.sleep((long) 1);
         }
+        Lecteur.stopAllAudio();
+        
     }
     
 }
