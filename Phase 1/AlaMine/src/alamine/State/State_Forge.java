@@ -19,7 +19,14 @@ public class State_Forge extends State{
 
     @Override
     public State transition() {
-        
+        State retour = null;
+        if (this.getNain().fuiteTaverne()){
+            retour = new State_Taverne(this.getNain());
+        }
+        else {
+            retour = new State_Travail(this.getNain());
+        }
+        return retour;
     }
 
     @Override

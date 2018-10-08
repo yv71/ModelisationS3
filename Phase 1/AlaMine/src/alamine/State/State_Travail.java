@@ -26,6 +26,7 @@ public class State_Travail extends State{
         else {
             retour = new State_Pause(this.getNain());
         }
+        return retour;
     }
 
     @Override

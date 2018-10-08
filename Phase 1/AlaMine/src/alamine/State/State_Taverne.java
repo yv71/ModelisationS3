@@ -5,10 +5,39 @@
  */
 package alamine.State;
 
+import alamine.Nain;
+
 /**
  *
  * @author yv066840
  */
 public class State_Taverne extends State{
+
+    public State_Taverne(Nain n) {
+        super(n);
+    }
+
+    @Override
+    public State transition() {
+        State retour = null;
+        if (this.getNain().getTa()>=8){
+            retour = new State_Dodo(this.getNain());
+        }
+        else if (this.getNain().taperTavernier()){
+            retour = new State_Travail(this.getNain());
+        }
+        else{
+            retour = new State_Taverne(this.getNain());
+        }
+        return retour;
+    }
+
+    @Override
+    public void agir() {
+        this.getNain().boirePintes(3);
+        this.getNain().diminuerTaPause();
+    }
+
+    
     
 }

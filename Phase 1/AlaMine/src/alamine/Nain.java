@@ -61,7 +61,28 @@ public class Nain {
     public boolean cassePioche(){
         boolean res = false;
         double prob;
-        prob=0.1+(0.05*this.Ta);
+        prob=0.1+(0.05*this.getTa());
+        Random r = new Random();
+        double proba = r.nextDouble();
+        if (prob > proba){
+            res = true;
+        }
+        return res;
+    }
+    
+    public boolean fuiteTaverne(){
+        boolean res = false;
+        Random r = new Random();
+        int rand = r.nextInt();
+        if(rand>=60){
+            res=true;
+        }
+        return res;
+    }
+    
+    public boolean taperTavernier(){
+        boolean res = false;
+        double prob = 0.05+(0.15*this.getTa());
         Random r = new Random();
         double proba = r.nextDouble();
         if (prob > proba){
