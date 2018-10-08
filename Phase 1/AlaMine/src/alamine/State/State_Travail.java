@@ -32,6 +32,7 @@ public class State_Travail extends State{
     @Override
     public void agir() {
         this.getNain().diminuerTaTravail();
+        this.getNain().getCptMine().passeTranche();
     }
 
     @Override

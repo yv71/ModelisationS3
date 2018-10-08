@@ -24,8 +24,10 @@ public class AlaMine {
             
             System.out.println(t.toString());
             System.out.println(n.toString());
-            System.out.println(n.getCptTaverne().toString("Taverne"));
-            
+            if(i%(24*3)==0){
+                System.out.println(n.getCptTaverne().toString("Taverne"));
+                System.out.println(n.getCptMine().toString("Mine"));
+            }
             n.setEtat(n.getEtat().transition());
             t.passeTranche();
             
