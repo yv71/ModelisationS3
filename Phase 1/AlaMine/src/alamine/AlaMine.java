@@ -16,6 +16,13 @@ public class AlaMine {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Nain n = new Nain();
+        boolean b = true;
+        while(b){
+            n.getEtat().agir();
+            System.out.println(n.getNom()+"\t"+n.getEtat().toString());
+            n.setEtat(n.getEtat().transition());
+        }
     }
     
 }

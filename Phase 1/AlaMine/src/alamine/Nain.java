@@ -102,6 +102,14 @@ public class Nain {
     public int getPoids() {
         return poids;
     }
+
+    public State getEtat() {
+        return etat;
+    }
+
+    public void setEtat(State etat) {
+        this.etat = etat;
+    }
     
     
 }
