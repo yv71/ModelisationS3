@@ -34,5 +34,10 @@ public class State_Pause extends State{
         this.getNain().boirePinte();
         this.getNain().diminuerTaPause();
     }
+
+    @Override
+    public String toString() {
+        return "J'ai un caillou dans ma botte et j'ai soif ! Tavernier ! Une bière !";
+    }
     
 }

@@ -38,6 +38,14 @@ public class State_Taverne extends State{
         this.getNain().diminuerTaPause();
     }
 
+    @Override
+    public String toString() {
+        return "Voici l'histoire d'un nain capable\n" +
+        "De courir vite, et de voyager loin\n" +
+        "Dans son épopée formidable,\n" +
+        "Nous le suivrons, une bière à la main!";
+    }
+
     
     
 }

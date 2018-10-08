@@ -33,5 +33,10 @@ public class State_Forge extends State{
     public void agir() {
         this.getNain().diminuerTaPause();
     }
+
+    @Override
+    public String toString() {
+        return "Un nain sans pioche, c'est comme une bière sans alcool";
+    }
     
 }

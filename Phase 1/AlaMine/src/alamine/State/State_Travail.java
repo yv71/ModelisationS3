@@ -33,5 +33,10 @@ public class State_Travail extends State{
     public void agir() {
         this.getNain().diminuerTaTravail();
     }
+
+    @Override
+    public String toString() {
+        return "Au delà des montagnes embrumées. Non loin des sombres cavernes du passé. Dans l'aube bleutée, il faut aller en quete de l'or pale et enchanté !";
+    }
     
 }
