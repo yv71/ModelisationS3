@@ -6,6 +6,8 @@
 package alamine;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -85,7 +87,11 @@ public class Affichage extends javax.swing.JFrame {
             }
             n.setEtat(n.getEtat().transition());
             t.passeTranche();            
-            TimeUnit.MILLISECONDS.sleep((long) 1.4);
+        try {
+            TimeUnit.MILLISECONDS.sleep((long) 1);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Affichage.class.getName()).log(Level.SEVERE, null, ex);
+        }
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
