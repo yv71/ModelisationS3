@@ -26,5 +26,10 @@ public class State_Dodo extends State{
     public void agir() {
         this.getNain().dodo();
     }
+
+    @Override
+    public String toString() {
+        return "Rrrrrrhh!";
+    }
     
 }

@@ -24,11 +24,9 @@ public abstract class State {
     public int getDuree(){
         return this.duree;
     }
-
     public Nain getNain() {
         return nain;
     }
-    
-    
+    public abstract String toString();
     
 }

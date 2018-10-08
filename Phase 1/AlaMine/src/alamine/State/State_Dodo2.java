@@ -28,5 +28,10 @@ public class State_Dodo2 extends State {
     public void agir() {
         
     }
+
+    @Override
+    public String toString() {
+        return "Rrrrrrrrhhhhh!";
+    }
     
 }
