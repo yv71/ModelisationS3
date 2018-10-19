@@ -27,22 +27,19 @@ public class AlaMine {
         Lecteur.play("Ressources/DiggyDiggyHole.mp3", 20);        
         for(int i=0;i<(24*200*3);i++){
             n.getEtat().agir();
-            System.out.println(t.toString());
+            /*System.out.println(t.toString());
             System.out.println(n.toString());
             if(i%(24*3)==0){
                 System.out.println(n.getCptTaverne().toString("Taverne"));
                 System.out.println(n.getCptMine().toString("Mine"));
-            }
+            }*/
             n.setEtat(n.getEtat().transition());
             t.passeTranche();            
-            TimeUnit.MILLISECONDS.sleep((long) 1);
+            //TimeUnit.MILLISECONDS.sleep((long) 1);
         }
         System.out.println(n.getCptTaverne().toString("Taverne"));
         System.out.println(n.getCptMine().toString("Mine"));
-<<<<<<< HEAD
-=======
         System.out.println(State_Taverne.getMaxTav());
->>>>>>> 5b96d07d7f1135c6106d9093935423683b274515
         Lecteur.stopAllAudio();
         
     }
