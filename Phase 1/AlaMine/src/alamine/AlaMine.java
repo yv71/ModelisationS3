@@ -5,6 +5,7 @@
  */
 package alamine;
 
+import alamine.State.State_Taverne;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,6 +37,9 @@ public class AlaMine {
             t.passeTranche();            
             TimeUnit.MILLISECONDS.sleep((long) 1);
         }
+        System.out.println(n.getCptTaverne().toString("Taverne"));
+        System.out.println(n.getCptMine().toString("Mine"));
+        System.out.println(State_Taverne.getMaxTav());
         Lecteur.stopAllAudio();
         
     }
