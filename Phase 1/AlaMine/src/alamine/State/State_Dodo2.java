@@ -31,6 +31,7 @@ public class State_Dodo2 extends State {
 
     @Override
     public String toString() {
+        String s;
         return "Rrrrrrrrhhhhh!";
     }
     

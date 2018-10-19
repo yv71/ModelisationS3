@@ -36,6 +36,8 @@ public class AlaMine {
             t.passeTranche();            
             TimeUnit.MILLISECONDS.sleep((long) 1);
         }
+        System.out.println(n.getCptTaverne().toString("Taverne"));
+        System.out.println(n.getCptMine().toString("Mine"));
         Lecteur.stopAllAudio();
         
     }

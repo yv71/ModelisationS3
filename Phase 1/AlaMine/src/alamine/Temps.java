@@ -83,4 +83,8 @@ public class Temps {
         }
         return res;
     }
+    
+    public int getJour(){
+        return this.jour;
+    }
 }
