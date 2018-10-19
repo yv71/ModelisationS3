@@ -33,6 +33,7 @@ public class State_Pause extends State{
     public void agir() {
         this.getNain().boirePinte();
         this.getNain().diminuerTaPause();
+        this.getNain().getCptMine().passeTranche();
     }
 
     @Override
