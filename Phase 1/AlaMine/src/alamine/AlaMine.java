@@ -25,23 +25,24 @@ public class AlaMine {
         Temps t = new Temps();
         t.resetHorloge();
         Lecteur.play("Ressources/DiggyDiggyHole.mp3", 20);        
-        for(int i=0;i<(24*200*3);i++){
+        for(int i=0;i<(24*3*200000);i++){
             n.getEtat().agir();
-            System.out.println(t.toString());
+            /*System.out.println(t.toString());
             System.out.println(n.toString());
             if(i%(24*3)==0){
                 System.out.println(n.getCptTaverne().toString("Taverne"));
                 System.out.println(n.getCptMine().toString("Mine"));
-            }
+            }*/
             n.setEtat(n.getEtat().transition());
-            t.passeTranche();            
-            TimeUnit.MILLISECONDS.sleep((long) 1);
+            t.passeTranche();
+            //TimeUnit.MILLISECONDS.sleep((long) 100);
         }
+        System.out.println(t.toString());
         System.out.println(n.getCptTaverne().toString("Taverne"));
         System.out.println(n.getCptMine().toString("Mine"));
-        System.out.println(State_Taverne.getMaxTav());
+        System.out.println(n.getCptDodo().toString("Dodo"));
+        System.out.println("Ta max = "+n.getTaMax());
+        System.out.println("Nb cycle tav max : "+State_Taverne.getMaxTav());
         Lecteur.stopAllAudio();
-        
     }
-    
 }
