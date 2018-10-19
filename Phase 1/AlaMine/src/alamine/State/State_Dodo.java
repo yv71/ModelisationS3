@@ -26,6 +26,7 @@ public class State_Dodo extends State{
     public void agir() {
         this.getNain().dodo();
         this.getNain().getCptMine().passeTranche();
+        this.getNain().getCptDodo().passeTranche();
     }
 
     @Override

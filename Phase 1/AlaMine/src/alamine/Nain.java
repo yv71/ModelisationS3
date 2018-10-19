@@ -20,8 +20,10 @@ public class Nain {
     private State etat;
     private final static double dT = 0.15; //Diminution du taux d'alcool quand il travaille 
     private final static double dA = 0.10; //Diminution du taux d'alcool quand il ne travaille pas
+    private double TaMax;
     private Temps cptMine;
     private Temps cptTaverne;
+    private Temps cptDodo;
     
     public Nain(){
         Ta = 0;
@@ -30,6 +32,8 @@ public class Nain {
         this.etat = new State_Travail(this);
         this.cptMine = new Temps();
         this.cptTaverne = new Temps();
+        this.cptDodo = new Temps();
+        TaMax=0;
     }
     /**
      * Fait boire une pinte au nain
@@ -71,6 +75,9 @@ public class Nain {
      * Reset l'alcoolémie
      */
     public void dodo(){
+        if (Ta>TaMax){
+            TaMax=Ta;
+        }
         this.Ta = 0;
     }
     /**
@@ -156,4 +163,14 @@ public class Nain {
     public String toString(){
         return this.getNom()+" :\t\""+this.getEtat().toString()+"\"";
     }
+
+    public double getTaMax() {
+        return TaMax;
+    }
+
+    public Temps getCptDodo() {
+        return cptDodo;
+    }
+    
+    
 }

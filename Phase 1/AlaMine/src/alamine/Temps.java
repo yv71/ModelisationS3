@@ -69,6 +69,9 @@ public class Temps {
         else if(s.equalsIgnoreCase("Taverne")){
             res="Temps passé à la taverne : ";
         }
+        else if(s.equalsIgnoreCase("Dodo")){
+            res="Temps passé à dormir : ";
+        }
         if(jour>0){
             res+=jour+" jour(s) "+heure+" heure(s) et "+minute+"minute(s)";
         }
