@@ -14,6 +14,8 @@ import alamine.Nain;
 public class State_Taverne extends State{
 
     private static int nbC=0;
+    private static int maxTav=0;
+    private static int nbTour=0;
     public State_Taverne(Nain n) {
         super(n);
     }
@@ -24,10 +26,18 @@ public class State_Taverne extends State{
         if (this.getNain().getTa()>=8){
             retour = new State_Dodo(this.getNain());
             nbC=0;
+            if (nbTour>maxTav){
+                this.maxTav=nbTour;
+            }
+            nbTour=0;
         }
         else if (this.getNain().taperTavernier()){
             retour = new State_Travail(this.getNain());
             nbC=0;
+            if (nbTour>maxTav){
+                this.maxTav=nbTour;
+            }
+            nbTour=0;
         }
         else{
             retour = new State_Taverne(this.getNain());
@@ -35,6 +45,7 @@ public class State_Taverne extends State{
                 nbC+=1;
             }
             else nbC=0;
+            this.nbTour++;
         }
         return retour;
     }
@@ -44,6 +55,7 @@ public class State_Taverne extends State{
         this.getNain().boirePintes(3);
         this.getNain().diminuerTaPause();
         this.getNain().getCptTaverne().passeTranche();
+        
     }
 
     @Override
@@ -111,6 +123,10 @@ public class State_Taverne extends State{
             break;
         }
         return res;
+    }
+
+    public static int getMaxTav() {
+        return maxTav;
     }
 
     
