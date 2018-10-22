@@ -39,8 +39,11 @@ public class AlaMine {
         }
         System.out.println(n.getCptTaverne().toString("Taverne"));
         System.out.println(n.getCptMine().toString("Mine"));
+        System.out.println(n.getCptResteTaverne().toString());
+        System.out.println(n.getCptForgeToTaverne().toString());
+        System.out.println(n.getCptMineToForge().toString());
         System.out.println(State_Taverne.getMaxTav());
-        Lecteur.stopAllAudio();
+        //Lecteur.stopAllAudio();
         
     }
     

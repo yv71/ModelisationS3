@@ -25,7 +25,10 @@ public class Nain {
     private Temps cptTaverne;
     private Temps cptDodo;
     private Temps cptForge;
-    
+    private Temps cptTaverneToMine;
+    private Temps cptResteTaverne;
+    private Temps cptMineToForge;
+    private Temps cptForgeToTaverne;
     
     public Nain(){
         Ta = 0;
@@ -36,12 +39,16 @@ public class Nain {
         this.cptTaverne = new Temps();
         this.cptDodo = new Temps();
         this.cptForge = new Temps();
+        this.cptTaverneToMine = new Temps();
+        this.cptResteTaverne = new Temps();
+        this.cptForgeToTaverne = new Temps();
+        this.cptMineToForge = new Temps();
         TaMax=0;
     }
 
     public Temps getCptForge() {
         return cptForge;
-    }
+    }    
     
     /**
      * Fait boire une pinte au nain
@@ -178,6 +185,22 @@ public class Nain {
 
     public Temps getCptDodo() {
         return cptDodo;
+    }
+
+    public Temps getCptTaverneToMine() {
+        return cptTaverneToMine;
+    }
+
+    public Temps getCptResteTaverne() {
+        return cptResteTaverne;
+    }
+
+    public Temps getCptMineToForge() {
+        return cptMineToForge;
+    }
+
+    public Temps getCptForgeToTaverne() {
+        return cptForgeToTaverne;
     }
     
     

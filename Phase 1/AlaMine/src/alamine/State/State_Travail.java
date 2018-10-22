@@ -21,6 +21,7 @@ public class State_Travail extends State{
     public State transition() {
         State retour = null;
         if (this.getNain().cassePioche()){
+            this.getNain().getCptMineToForge().passeTranche();
             retour = new State_Forge(this.getNain());
         }
         else {

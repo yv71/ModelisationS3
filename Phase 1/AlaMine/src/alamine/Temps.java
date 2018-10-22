@@ -72,6 +72,9 @@ public class Temps {
         else if(s.equalsIgnoreCase("Dodo")){
             res="Temps passé à dormir : ";
         }
+        else if(s.equalsIgnoreCase("Forge")){
+            res="Temps passé à la forge : ";
+        }
         if(jour>0){
             res+=jour+" jour(s) "+heure+" heure(s) et "+minute+"minute(s)";
         }
@@ -89,5 +92,9 @@ public class Temps {
     
     public int getJour(){
         return this.jour;
+    }
+    
+    public int getNbIteration(){
+        return minute/20+heure*3+jour*72;
     }
 }

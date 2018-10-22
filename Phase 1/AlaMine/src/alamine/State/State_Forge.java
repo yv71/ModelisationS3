@@ -21,6 +21,7 @@ public class State_Forge extends State{
     public State transition() {
         State retour = null;
         if (this.getNain().fuiteTaverne()){
+            this.getNain().getCptForgeToTaverne().passeTranche();
             retour = new State_Taverne(this.getNain());
         }
         else {

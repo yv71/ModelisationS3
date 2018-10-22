@@ -24,6 +24,7 @@ public class State_Taverne extends State{
     public State transition() {
         State retour = null;
         if (this.getNain().getTa()>=8){
+            this.getNain().getCptTaverneToMine().passeTranche();
             retour = new State_Dodo(this.getNain());
             nbC=0;
             if (nbTour>maxTav){
@@ -32,6 +33,7 @@ public class State_Taverne extends State{
             nbTour=0;
         }
         else if (this.getNain().taperTavernier()){
+            this.getNain().getCptTaverneToMine().passeTranche();
             retour = new State_Travail(this.getNain());
             nbC=0;
             if (nbTour>maxTav){
@@ -40,6 +42,7 @@ public class State_Taverne extends State{
             nbTour=0;
         }
         else{
+            this.getNain().getCptResteTaverne().passeTranche();
             retour = new State_Taverne(this.getNain());
             if(nbC<9){
                 nbC+=1;
