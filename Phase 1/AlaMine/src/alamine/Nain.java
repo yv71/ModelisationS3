@@ -24,6 +24,8 @@ public class Nain {
     private Temps cptMine;
     private Temps cptTaverne;
     private Temps cptDodo;
+    private Temps cptForge;
+    
     
     public Nain(){
         Ta = 0;
@@ -33,8 +35,14 @@ public class Nain {
         this.cptMine = new Temps();
         this.cptTaverne = new Temps();
         this.cptDodo = new Temps();
+        this.cptForge = new Temps();
         TaMax=0;
     }
+
+    public Temps getCptForge() {
+        return cptForge;
+    }
+    
     /**
      * Fait boire une pinte au nain
      */

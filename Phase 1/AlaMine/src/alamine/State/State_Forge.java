@@ -32,6 +32,7 @@ public class State_Forge extends State{
     @Override
     public void agir() {
         this.getNain().diminuerTaPause();
+        this.getNain().getCptForge().passeTranche();
     }
 
     @Override
