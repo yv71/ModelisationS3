@@ -45,7 +45,6 @@ public class Nain {
         this.cptMineToForge = new Temps();
         TaMax=0;
     }
-
     public Temps getCptForge() {
         return cptForge;
     }    
