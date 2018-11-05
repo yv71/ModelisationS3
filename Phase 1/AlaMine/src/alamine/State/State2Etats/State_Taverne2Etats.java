@@ -7,6 +7,7 @@ package alamine.State.State2Etats;
 
 import alamine.Nain;
 import alamine.State.State;
+import java.util.Random;
 
 /**
  *
@@ -20,7 +21,13 @@ public class State_Taverne2Etats extends State{
 
     @Override
     public State transition() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        State res = new State_Mine(this.getNain());
+        Random r = new Random();
+        double d = r.nextDouble();
+        if(d<=0.23){
+            res = new State_Taverne2Etats(this.getNain());
+        }
+        return res;
     }
 
     @Override

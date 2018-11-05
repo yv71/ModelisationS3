@@ -29,14 +29,14 @@ public class AffichageAutomata extends javax.swing.JFrame {
     public AffichageAutomata() throws InterruptedException {
         initComponents();
         listMusic = new ArrayList<>();
-        File directory = new File("C:\\Users\\yv066840\\Desktop\\ModelisationS3\\Phase 1\\AlaMine\\src\\alamine\\Ressources");
+        /*File directory = new File("src\\Ressources");
         String[] list = directory.list();
         for (String s : list){
             if (s.endsWith(".mp3")){
                 jComboBox1.addItem(s.substring(0, s.length()-4));
             }
         }
-        jLabel5.setIcon(new ImageIcon("C:\\Users\\yv066840\\Desktop\\ModelisationS3\\Phase 1\\AlaMine\\src\\alamine\\Ressources\\Gandalf.png"));
+        jLabel5.setIcon(new ImageIcon(AffichageAutomata.class.getResource("Ressources/Gandalf.png")));*/
         jPanel2.setVisible(false);
         jLabel5.setVisible(false);
         jLabel7.setVisible(false);
@@ -50,7 +50,7 @@ public class AffichageAutomata extends javax.swing.JFrame {
             jLabel5.setVisible(false);
             jLabel7.setVisible(false);
         }
-        Lecteur.play("Ressources/"+ jComboBox1.getSelectedItem() + ".mp3", 20); 
+//        Lecteur.play("Ressources/"+ jComboBox1.getSelectedItem() + ".mp3", 20); 
         int it = (int)jSpinner1.getValue();
         for(int i=0;i<(24*it*3);i++){
             n.getEtat().agir();
