@@ -15,12 +15,11 @@ public class Cryptage_Transposition {
     private String cle;
     private String mot;
 
-    public Cryptage_Transposition(String cle, String mot) {
+    public Cryptage_Transposition(String cle) {
         this.cle = cle;
-        this.mot = mot.replace(" ", "");
     }
     
-    public String crypte(){
+    public String crypte(String chaine){
         int nbCharPlus = 0;
         int nbLignes = (mot.length()/cle.length());
         if (mot.length()%cle.length() != 0){

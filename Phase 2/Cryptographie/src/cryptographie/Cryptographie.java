@@ -20,11 +20,16 @@ public class Cryptographie {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Cryptage_Transposition aled = new Cryptage_Transposition("chat", "SALUT JE SUIS YOANN");        
+        /*Cryptage_Transposition aled = new Cryptage_Transposition("trombonne", "SALUT JE SUIS YOANN ET JE SUIS DEBILE");        
         String motCrypte = aled.crypte();
-        Decryptage_Transposition oskour = new Decryptage_Transposition("chat", motCrypte);
         System.out.println(motCrypte);
-        String motDecrypte = oskour.decrypt();
+        Decryptage_Transposition oskour = new Decryptage_Transposition("trombonne");
+        
+        String motDecrypte = oskour.decrypt(motCrypte);
+        System.out.println(motDecrypte);
+*/
+        Crypteur_Transpo crypt = new Crypteur_Transpo("chat");
+        System.out.println(crypt.cryptage("Salut je susi une bite"));
         
     }
     
