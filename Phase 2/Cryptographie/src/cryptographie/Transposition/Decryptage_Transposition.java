@@ -13,19 +13,19 @@ public class Decryptage_Transposition {
     private String mot;
     private String cle;
 
-    public Decryptage_Transposition(String cle, String mot) {
-        this.mot = mot.replace(" ", "");
-        System.out.println(this.mot);
+    public Decryptage_Transposition(String cle) {
+        this.mot = null;
         this.cle = cle;
     }
     
    
-    public String decrypt(){
+    public String decrypt(String mot){
         String rez = "";
+        this.mot = mot.replace(" ", "");
         int nbLignes = mot.length()/cle.length();
         int nbColonnes = cle.length();
         //if (mot.length()%cle.length())
-        char [][] tableauDecodage = new char [nbColonnes][nbLignes];
+        char [][] tableauDecodage = new char [nbLignes][nbColonnes];
         int[] tableauCle = new int[cle.length()];
         char[] tableau = new char[cle.length()];
         for(int i = 0; i < cle.length();i++){
@@ -35,7 +35,7 @@ public class Decryptage_Transposition {
             char c = tableau[0];
             int num = 0;
             for(int j = 1; j < cle.length();j++){
-                if ((c > tableau[j])){
+                if (c > tableau[j]){
                     c = tableau[j];
                     num = j;
                 }
@@ -43,21 +43,40 @@ public class Decryptage_Transposition {
             tableau[num] = (char) 255;
             tableauCle[i] = num;
         }
-        int aled = 0;
-        for (int i = 0; i < nbColonnes; i++){
-            for (int j = 0; j < nbLignes; j++){
-                tableauDecodage[tableauCle[j]][i] = mot.charAt(aled) ;
+        int aled=0;
+        
+        for(int num : tableauCle){
+            for(int i = 0;i<nbLignes;i++){
+                tableauDecodage[i][num]=this.mot.charAt(aled);
                 aled++;
             }
         }
+        for(int i=0;i<nbLignes;i++){
+            for(int j=0;j<nbColonnes;j++){
+                System.out.print(tableauDecodage[i][j]);
+                rez+=tableauDecodage[i][j];
+            }
+        }
+        /*
+        int aled = 0;
+        for (int i = 0; i < nbColonnes; i++){
+            for (int j = 0; j < nbLignes; j++){
+                tableauDecodage[i][tableauCle[j]] = this.mot.charAt(aled) ;
+                aled++;
+                System.out.print(tableauDecodage[i][tableauCle[j]]);
+            }
+            System.out.println("");
+        }
         
-                
+        
+           /*     
                 
         for(int i = 0; i < nbColonnes; i++){
             for (int j = 0; j < nbLignes; j++){
                
             }
         }
+*/
         return rez;
     }
 }
