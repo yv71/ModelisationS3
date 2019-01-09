@@ -17,6 +17,7 @@ public class Crypteur_Transpo {
     private int nbLignes;
     private int nbColonnes;
     private char[] tableauCle;
+    private String mot;
     
 
     public Crypteur_Transpo(String cle) {
@@ -27,7 +28,7 @@ public class Crypteur_Transpo {
     }
     
     private void init(String chaine){
-        String mot = chaine.replace(" ", "");
+        mot = chaine.replace(" ", "");
         this.nbLignes=mot.length()/cle.length();
         this.nbColonnes=cle.length();
         for(int i=0;i<nbColonnes;i++){
@@ -36,32 +37,32 @@ public class Crypteur_Transpo {
     }
     
     public String cryptage(String chaine){
-        String rez=null;
+        String rez="";
         init(chaine);
         //On rajoute la ligne incomplète qui n'est pas comptée
-        if(chaine.length()%cle.length() != 0){
+        if(mot.length()%cle.length() != 0){
             nbLignes++;
         }
-        int nb=0;
-        char[][] tableauCodage = remplissage(chaine);
-        for(int i=0;i<nbLignes;i++){
-            for(int j=0;j<nbColonnes;j++){
-                rez+=tableauCodage[traitementCle()[i]][j];
-                nb++;
+        char[][] tableauCodage = new char[nbLignes][nbColonnes];
+        tableauCodage = remplissage(mot);
+        int[] tableau = traitement();
+        for(int i=0;i<nbColonnes;i++){
+            for(int j=0;j<nbLignes;j++){
+                rez+=tableauCodage[j][tableau[i]];
             }
         }
         return rez;
     }
     
     public String decryptage(String chaine){
-        String rez=null;
+        String rez="";
         init(chaine);
         char[][] tableauDecodage = new char[nbLignes][nbColonnes];
         int nb=0;
         
-        for(int num : traitementCle()){
+        for(int num : traitement()){
             for(int i=0;i<nbLignes;i++){
-                tableauDecodage[i][num]=chaine.charAt(i);
+                tableauDecodage[i][num]=mot.charAt(nb);
                 nb++;
             }
         }
@@ -72,23 +73,11 @@ public class Crypteur_Transpo {
         }
         return rez;
     }
-    
-    private int[] traitementCle(){
-        int[] res=null;
-        for(int i=0;i<tableauCle.length;i++){
-            char c = tableauCle[0];
-            int num = 0;
-            for(int j=1;j<tableauCle.length;j++){
-                if(c>tableauCle[j]){
-                    c=tableauCle[j];
-                    num=j;
-                }
-            }
-            tableauCle[num]=(char) 255;
-            res[i]=num;
-        }
-        return res;
-    }
+    /**
+     * complete la chaine pour que le tableau 2 dimensions n'ai pas de case vide
+     * @param chaine
+     * @return 
+     */
     private char[][] remplissage(String chaine){
         char[][] tableauCodage = new char[nbLignes][nbColonnes];
         int nb=0;
@@ -107,5 +96,29 @@ public class Crypteur_Transpo {
             }
         }
         return tableauCodage;
+    }
+    /**
+     * donne l'ordre des colonnes à traiter
+     * @return 
+     */
+    private int[] traitement(){
+        int nb=-1;
+        int[] rez = new int[cle.length()];
+        for(int i=0;i<cle.length();i++){
+            char c = tableauCle[0];
+            for(int j=0;j<cle.length();j++){
+                if(c>tableauCle[j]){
+                    c=tableauCle[j];
+                }
+            }
+            for(int j=0;j<cle.length();j++){
+                if(c==tableauCle[j]){
+                    nb=j;
+                }
+            }
+            tableauCle[nb]=(char) 255;
+            rez[i]=nb;
+        }
+        return rez;
     }
 }
