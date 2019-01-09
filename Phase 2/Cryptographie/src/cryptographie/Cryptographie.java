@@ -15,8 +15,8 @@ public class Cryptographie {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Crypteur_Transpo crypt = new Crypteur_Transpo("anticryptage");
-        String temp = crypt.cryptage("Hedhie");
+        Crypteur_Transpo crypt = new Crypteur_Transpo("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ");
+        String temp = crypt.cryptage("Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa ");
         System.out.println(temp);
         System.out.println(crypt.decryptage(temp));
     }
