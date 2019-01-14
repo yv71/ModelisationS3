@@ -29,6 +29,7 @@ public class Crypteur_Transpo {
     
     private void init(String chaine){
         mot = chaine.replace(" ", "");
+        mot = mot.toLowerCase();
         this.nbLignes=mot.length()/cle.length();
         this.nbColonnes=cle.length();
         for(int i=0;i<nbColonnes;i++){
