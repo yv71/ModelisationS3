@@ -5,14 +5,14 @@ public class DiffieHellman {
     public DiffieHellman() {
     }
 
-    private final static double nombrePremier = 24036583;//65537;
+    public final static double nombrePremier = 24036583;   //65537;
     
     public static double calculCle(double nb, double nombreSecret) {
         return puissance(nb,nombreSecret);
     }
     public static double puissance(double nb, double pow){
         double resultat=nb;
-        for(int i=0;i<pow;i++){
+        for(int i=1;i<pow;i++){
             resultat=(resultat*nb)%nombrePremier;
         }
         return resultat;

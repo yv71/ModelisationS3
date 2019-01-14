@@ -155,18 +155,39 @@ public class Fenetre extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCleInterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCleInterActionPerformed
+        NumberFormat formatter = new DecimalFormat("#0");
+        this.jCleAlice.setText("");
+        this.jCleBob.setText("");
+        this.jCleInterBob.setText("");
+        this.jNbAmiAlice.setText("");
+        this.jNbAmiBob.setText("");
+        this.rCleInterAlice.setText("");
+        
         if(!this.jNbCommun.getText().isEmpty() && !this.jNbSecretAlice.getText().isEmpty() && !this.jNbSecretBob.getText().isEmpty()){
-            double cleInterAlice = DiffieHellman.calculCle(Double.valueOf(this.jNbCommun.getText()), Double.valueOf(this.jNbSecretAlice.getText()));
-            double cleInterBob = DiffieHellman.calculCle(Double.valueOf(this.jNbCommun.getText()), Double.valueOf(this.jNbSecretBob.getText()));
-            NumberFormat formatter = new DecimalFormat("#0");
-            this.rCleInterAlice.setText(formatter.format(cleInterAlice));
-            this.jCleInterBob.setText(formatter.format(cleInterBob));
-            this.jNbAmiAlice.setText(this.jCleInterBob.getText());
-            this.jNbAmiBob.setText(this.rCleInterAlice.getText());
-            double cleAlice = DiffieHellman.calculCle(Double.valueOf(this.jNbAmiAlice.getText()), Double.valueOf(this.jNbSecretAlice.getText()));
-            double cleBob = DiffieHellman.calculCle(Double.valueOf(this.jNbAmiBob.getText()), Double.valueOf(this.jNbSecretBob.getText()));
-            this.jCleAlice.setText(formatter.format(cleAlice));
-            this.jCleBob.setText(formatter.format(cleBob));
+            if(Double.valueOf(this.jNbCommun.getText())>DiffieHellman.nombrePremier){
+                this.rCleInterAlice.setText("Le nombre commun doit etre <"+formatter.format(DiffieHellman.nombrePremier));
+            }
+            else if(Double.valueOf(this.jNbSecretAlice.getText())>DiffieHellman.nombrePremier){
+                this.rCleInterAlice.setText("Le nombre secret doit etre <"+formatter.format(DiffieHellman.nombrePremier));
+            }
+            else if(Double.valueOf(this.jNbSecretBob.getText())>DiffieHellman.nombrePremier){
+                this.jCleInterBob.setText("Le nombre secret doit etre <"+formatter.format(DiffieHellman.nombrePremier));
+            }
+            else{
+                double cleInterAlice = DiffieHellman.calculCle(Double.valueOf(this.jNbCommun.getText()), Double.valueOf(this.jNbSecretAlice.getText()));
+                double cleInterBob = DiffieHellman.calculCle(Double.valueOf(this.jNbCommun.getText()), Double.valueOf(this.jNbSecretBob.getText()));
+                this.rCleInterAlice.setText(formatter.format(cleInterAlice));
+                this.jCleInterBob.setText(formatter.format(cleInterBob));
+                this.jNbAmiAlice.setText(this.jCleInterBob.getText());
+                this.jNbAmiBob.setText(this.rCleInterAlice.getText());
+                double cleAlice = DiffieHellman.calculCle(Double.valueOf(this.jNbAmiAlice.getText()), Double.valueOf(this.jNbSecretAlice.getText()));
+                double cleBob = DiffieHellman.calculCle(Double.valueOf(this.jNbAmiBob.getText()), Double.valueOf(this.jNbSecretBob.getText()));
+                this.jCleAlice.setText(formatter.format(cleAlice));
+                this.jCleBob.setText(formatter.format(cleBob));
+            }
+        }
+        else{
+            this.rCleInterAlice.setText("Tous les champs doivent être remplis");
         }
     }//GEN-LAST:event_jButtonCleInterActionPerformed
 
