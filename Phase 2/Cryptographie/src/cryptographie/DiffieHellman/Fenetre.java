@@ -30,15 +30,20 @@ public class Fenetre extends javax.swing.JFrame {
         lNbCommun = new javax.swing.JLabel();
         jNbCommun = new javax.swing.JTextField();
         lNbPerso = new javax.swing.JLabel();
-        jNbPerso = new javax.swing.JTextField();
+        jNbSecretAlice = new javax.swing.JTextField();
         lCleInter = new javax.swing.JLabel();
-        rCleInter = new javax.swing.JLabel();
+        rCleInterAlice = new javax.swing.JLabel();
         lNbAmi = new javax.swing.JLabel();
-        jNbAmi = new javax.swing.JTextField();
         lCle = new javax.swing.JLabel();
-        jCle = new javax.swing.JLabel();
+        jCleAlice = new javax.swing.JLabel();
         jButtonCleInter = new javax.swing.JButton();
-        jButtonCle = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jNbSecretBob = new javax.swing.JTextField();
+        jCleInterBob = new javax.swing.JLabel();
+        jNbAmiAlice = new javax.swing.JLabel();
+        jNbAmiBob = new javax.swing.JLabel();
+        jCleBob = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,12 +64,9 @@ public class Fenetre extends javax.swing.JFrame {
             }
         });
 
-        jButtonCle.setText("Valider");
-        jButtonCle.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCleActionPerformed(evt);
-            }
-        });
+        jLabel1.setText("Alice");
+
+        jLabel2.setText("Bob");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,64 +80,91 @@ public class Fenetre extends javax.swing.JFrame {
                     .addComponent(lCleInter)
                     .addComponent(lNbAmi)
                     .addComponent(lCle))
-                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonCle)
-                    .addComponent(jButtonCleInter)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jNbCommun, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                        .addComponent(jNbPerso)
-                        .addComponent(rCleInter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jNbAmi)
-                        .addComponent(jCle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(82, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jNbAmiAlice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jNbSecretAlice, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rCleInterAlice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jCleAlice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jNbSecretBob, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                                    .addComponent(jCleInterBob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jNbAmiBob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jCleBob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(47, 47, 47))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(207, 207, 207)
+                                .addComponent(jButtonCleInter)
+                                .addContainerGap(230, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jNbCommun, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(168, 168, 168))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(340, 340, 340)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(137, 137, 137))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lNbCommun)
                     .addComponent(jNbCommun, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lNbPerso)
-                    .addComponent(jNbPerso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jNbSecretAlice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jNbSecretBob, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButtonCleInter)
                 .addGap(1, 1, 1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(lCleInter)
-                    .addComponent(rCleInter, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lNbAmi)
-                    .addComponent(jNbAmi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(jButtonCle)
-                .addGap(26, 26, 26)
+                    .addComponent(rCleInterAlice, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                    .addComponent(jCleInterBob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lNbAmi)
+                    .addComponent(jNbAmiAlice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jNbAmiBob, javax.swing.GroupLayout.DEFAULT_SIZE, 16, Short.MAX_VALUE))
+                .addGap(60, 60, 60)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jCleBob, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lCle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                    .addComponent(jCleAlice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(171, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCleInterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCleInterActionPerformed
-        if(!this.jNbCommun.getText().isEmpty() && !this.jNbPerso.getText().isEmpty()){
-            int temp = Aled.calculCléInter(Integer.valueOf(this.jNbCommun.getText()), Integer.valueOf(this.jNbPerso.getText()));
-            this.rCleInter.setText(Integer.toString(temp));
+        if(!this.jNbCommun.getText().isEmpty() && !this.jNbSecretAlice.getText().isEmpty() && !this.jNbSecretBob.getText().isEmpty()){
+            double cleInterAlice = DiffieHellman.calculCle(Double.valueOf(this.jNbCommun.getText()), Double.valueOf(this.jNbSecretAlice.getText()));
+            double cleInterBob = DiffieHellman.calculCle(Double.valueOf(this.jNbCommun.getText()), Double.valueOf(this.jNbSecretBob.getText()));
+            this.rCleInterAlice.setText(Double.toString(cleInterAlice));
+            this.jCleInterBob.setText(Double.toString(cleInterBob));
+            this.jNbAmiAlice.setText(this.jCleInterBob.getText());
+            this.jNbAmiBob.setText(this.rCleInterAlice.getText());
+            double cleAlice = DiffieHellman.calculCle(Double.valueOf(this.jNbAmiAlice.getText()), Double.valueOf(this.jNbSecretAlice.getText()));
+            double cleBob = DiffieHellman.calculCle(Double.valueOf(this.jNbAmiBob.getText()), Double.valueOf(this.jNbSecretBob.getText()));
+            this.jCleAlice.setText(Double.toString(cleAlice));
+            this.jCleBob.setText(Double.toString(cleBob));
         }
     }//GEN-LAST:event_jButtonCleInterActionPerformed
-
-    private void jButtonCleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCleActionPerformed
-        if(!this.rCleInter.getText().isEmpty() && !this.jNbAmi.getText().isEmpty()){
-            int temp = Aled.calculCle(Integer.valueOf(this.jNbAmi.getText()), Integer.valueOf(this.jNbPerso.getText()));
-            this.jCle.setText(Integer.toString(temp));
-        }
-    }//GEN-LAST:event_jButtonCleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,17 +202,22 @@ public class Fenetre extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCle;
     private javax.swing.JButton jButtonCleInter;
-    private javax.swing.JLabel jCle;
-    private javax.swing.JTextField jNbAmi;
+    private javax.swing.JLabel jCleAlice;
+    private javax.swing.JLabel jCleBob;
+    private javax.swing.JLabel jCleInterBob;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jNbAmiAlice;
+    private javax.swing.JLabel jNbAmiBob;
     private javax.swing.JTextField jNbCommun;
-    private javax.swing.JTextField jNbPerso;
+    private javax.swing.JTextField jNbSecretAlice;
+    private javax.swing.JTextField jNbSecretBob;
     private javax.swing.JLabel lCle;
     private javax.swing.JLabel lCleInter;
     private javax.swing.JLabel lNbAmi;
     private javax.swing.JLabel lNbCommun;
     private javax.swing.JLabel lNbPerso;
-    private javax.swing.JLabel rCleInter;
+    private javax.swing.JLabel rCleInterAlice;
     // End of variables declaration//GEN-END:variables
 }

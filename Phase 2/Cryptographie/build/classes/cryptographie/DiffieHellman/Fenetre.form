@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lNbCommun" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -32,26 +32,58 @@
                   <Component id="lNbAmi" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lCle" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButtonCle" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButtonCleInter" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jNbCommun" pref="188" max="32767" attributes="0"/>
-                      <Component id="jNbPerso" max="32767" attributes="0"/>
-                      <Component id="rCleInter" max="32767" attributes="0"/>
-                      <Component id="jNbAmi" max="32767" attributes="0"/>
-                      <Component id="jCle" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jNbAmiAlice" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jNbSecretAlice" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="rCleInterAlice" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jCleAlice" alignment="0" pref="188" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jNbSecretBob" pref="174" max="32767" attributes="0"/>
+                                  <Component id="jCleInterBob" max="32767" attributes="0"/>
+                                  <Component id="jNbAmiBob" max="32767" attributes="0"/>
+                                  <Component id="jCleBob" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
+                              <Component id="jButtonCleInter" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="230" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jNbCommun" min="-2" pref="188" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="82" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="340" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lNbCommun" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jNbCommun" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -59,28 +91,30 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lNbPerso" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jNbPerso" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jNbSecretAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jNbSecretBob" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButtonCleInter" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Component id="lCleInter" min="-2" max="-2" attributes="0"/>
-                  <Component id="rCleInter" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="rCleInterAlice" pref="23" max="32767" attributes="0"/>
+                  <Component id="jCleInterBob" alignment="1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lNbAmi" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jNbAmi" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-              <Component id="jButtonCle" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lCle" max="32767" attributes="0"/>
-                  <Component id="jCle" max="32767" attributes="0"/>
+                  <Component id="lNbAmi" min="-2" max="-2" attributes="0"/>
+                  <Component id="jNbAmiAlice" max="32767" attributes="0"/>
+                  <Component id="jNbAmiBob" alignment="0" pref="16" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="132" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jCleBob" max="32767" attributes="0"/>
+                  <Component id="lCle" max="32767" attributes="0"/>
+                  <Component id="jCleAlice" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="171" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -98,28 +132,26 @@
         <Property name="text" type="java.lang.String" value="Entrer votre nombre secret"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jNbPerso">
+    <Component class="javax.swing.JTextField" name="jNbSecretAlice">
     </Component>
     <Component class="javax.swing.JLabel" name="lCleInter">
       <Properties>
         <Property name="text" type="java.lang.String" value="Donner cette valeur &#xe0; votre ami"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="rCleInter">
+    <Component class="javax.swing.JLabel" name="rCleInterAlice">
     </Component>
     <Component class="javax.swing.JLabel" name="lNbAmi">
       <Properties>
         <Property name="text" type="java.lang.String" value="Entrer le nombre de votre ami"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jNbAmi">
-    </Component>
     <Component class="javax.swing.JLabel" name="lCle">
       <Properties>
         <Property name="text" type="java.lang.String" value="Votre cle commune"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jCle">
+    <Component class="javax.swing.JLabel" name="jCleAlice">
     </Component>
     <Component class="javax.swing.JButton" name="jButtonCleInter">
       <Properties>
@@ -129,13 +161,25 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCleInterActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButtonCle">
+    <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Valider"/>
+        <Property name="text" type="java.lang.String" value="Alice"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCleActionPerformed"/>
-      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bob"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbSecretBob">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleInterBob">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNbAmiAlice">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNbAmiBob">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleBob">
     </Component>
   </SubComponents>
 </Form>
