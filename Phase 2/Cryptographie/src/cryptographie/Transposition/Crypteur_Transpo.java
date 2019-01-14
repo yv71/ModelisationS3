@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cryptographie;
+package cryptographie.Transposition;
 
 import java.util.Random;
 
@@ -90,7 +90,7 @@ public class Crypteur_Transpo {
                 }
                 else{
                     Random r = new Random();
-                    int valeur = 65+r.nextInt(90-65);
+                    int valeur = 97+r.nextInt(122-97);
                     tableauCodage[i][j]=(char) valeur;
                 }
             }

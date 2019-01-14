@@ -5,6 +5,8 @@
  */
 package cryptographie;
 
+import cryptographie.Transposition.Crypteur_Transpo;
+
 /**
  *
  * @author yv066840
@@ -19,6 +21,7 @@ public class Cryptographie {
         String temp = crypt.cryptage("Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa ");
         System.out.println(temp);
         System.out.println(crypt.decryptage(temp));
+        
     }
     
 }
