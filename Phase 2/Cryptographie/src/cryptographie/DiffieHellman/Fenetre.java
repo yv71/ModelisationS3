@@ -5,6 +5,9 @@
  */
 package cryptographie.DiffieHellman;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 /**
  *
  * @author yv066840
@@ -155,14 +158,15 @@ public class Fenetre extends javax.swing.JFrame {
         if(!this.jNbCommun.getText().isEmpty() && !this.jNbSecretAlice.getText().isEmpty() && !this.jNbSecretBob.getText().isEmpty()){
             double cleInterAlice = DiffieHellman.calculCle(Double.valueOf(this.jNbCommun.getText()), Double.valueOf(this.jNbSecretAlice.getText()));
             double cleInterBob = DiffieHellman.calculCle(Double.valueOf(this.jNbCommun.getText()), Double.valueOf(this.jNbSecretBob.getText()));
-            this.rCleInterAlice.setText(Double.toString(cleInterAlice));
-            this.jCleInterBob.setText(Double.toString(cleInterBob));
+            NumberFormat formatter = new DecimalFormat("#0");
+            this.rCleInterAlice.setText(formatter.format(cleInterAlice));
+            this.jCleInterBob.setText(formatter.format(cleInterBob));
             this.jNbAmiAlice.setText(this.jCleInterBob.getText());
             this.jNbAmiBob.setText(this.rCleInterAlice.getText());
             double cleAlice = DiffieHellman.calculCle(Double.valueOf(this.jNbAmiAlice.getText()), Double.valueOf(this.jNbSecretAlice.getText()));
             double cleBob = DiffieHellman.calculCle(Double.valueOf(this.jNbAmiBob.getText()), Double.valueOf(this.jNbSecretBob.getText()));
-            this.jCleAlice.setText(Double.toString(cleAlice));
-            this.jCleBob.setText(Double.toString(cleBob));
+            this.jCleAlice.setText(formatter.format(cleAlice));
+            this.jCleBob.setText(formatter.format(cleBob));
         }
     }//GEN-LAST:event_jButtonCleInterActionPerformed
 

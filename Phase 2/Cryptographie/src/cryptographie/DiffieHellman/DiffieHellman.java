@@ -5,7 +5,7 @@ public class DiffieHellman {
     public DiffieHellman() {
     }
 
-    private final static double nombrePremier = 65537;
+    private final static double nombrePremier = 24036583;//65537;
     
     public static double calculCle(double nb, double nombreSecret) {
         return puissance(nb,nombreSecret);
