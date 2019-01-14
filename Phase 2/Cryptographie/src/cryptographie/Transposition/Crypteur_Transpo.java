@@ -12,34 +12,42 @@ import java.util.Random;
  * @author dj715494
  */
 public class Crypteur_Transpo {
-    private String cle;
+    private static String cle;
+    private static int nbLignes;
+    private static int nbColonnes;
+    private static char[] tableauCle;
+    private static String mot;
     
-    private int nbLignes;
-    private int nbColonnes;
-    private char[] tableauCle;
-    private String mot;
+    private static Crypteur_Transpo instance;
     
+    private Crypteur_Transpo(){
+        
+    }
 
-    public Crypteur_Transpo(String cle) {
-        this.cle = cle;
-        this.nbColonnes=0;
-        this.nbLignes=0;
-        this.tableauCle=new char[cle.length()];
+    public static Crypteur_Transpo get() {
+        if(instance == null){
+            instance = new Crypteur_Transpo();
+        }
+        return instance;
     }
     
-    private void init(String chaine){
+    private static void init(String _cle, String chaine){
+        cle = _cle;
+        nbColonnes=0;
+        nbLignes=0;
+        tableauCle=new char[cle.length()];
         mot = chaine.replace(" ", "");
         mot = mot.toLowerCase();
-        this.nbLignes=mot.length()/cle.length();
-        this.nbColonnes=cle.length();
+        nbLignes=mot.length()/cle.length();
+        nbColonnes=cle.length();
         for(int i=0;i<nbColonnes;i++){
             tableauCle[i]=cle.charAt(i);
         }
     }
     
-    public String cryptage(String chaine){
+    public static String cryptage(String cle, String chaine){
         String rez="";
-        init(chaine);
+        init(cle, chaine);
         //On rajoute la ligne incomplète qui n'est pas comptée
         if(mot.length()%cle.length() != 0){
             nbLignes++;
@@ -55,9 +63,9 @@ public class Crypteur_Transpo {
         return rez;
     }
     
-    public String decryptage(String chaine){
+    public static String decryptage(String cle, String chaine){
         String rez="";
-        init(chaine);
+        init(cle, chaine);
         char[][] tableauDecodage = new char[nbLignes][nbColonnes];
         int nb=0;
         
@@ -79,7 +87,7 @@ public class Crypteur_Transpo {
      * @param chaine
      * @return 
      */
-    private char[][] remplissage(String chaine){
+    private static char[][] remplissage(String chaine){
         char[][] tableauCodage = new char[nbLignes][nbColonnes];
         int nb=0;
         
@@ -102,7 +110,7 @@ public class Crypteur_Transpo {
      * donne l'ordre des colonnes à traiter
      * @return 
      */
-    private int[] traitement(){
+    private static int[] traitement(){
         int nb=-1;
         int[] rez = new int[cle.length()];
         for(int i=0;i<cle.length();i++){

@@ -17,10 +17,9 @@ public class Cryptographie {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Crypteur_Transpo crypt = new Crypteur_Transpo("2335847");
-        String temp = crypt.cryptage("Salut je m'appelle Yoann et je suis diabétique");
+        String temp = Crypteur_Transpo.cryptage("2335847","Salut je m'appelle Yoann et je suis diabétique");
         System.out.println(temp);
-        System.out.println(crypt.decryptage(temp));
+        System.out.println(Crypteur_Transpo.decryptage("2335847",temp));
         
     }
     
