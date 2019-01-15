@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
+              <Component id="lAlice" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
+              <Component id="jEve" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="lBob" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
+              <Component id="jButtonAlice" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+              <Component id="jButtonEveToAlice" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+              <Component id="jButtonEveToBob" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButtonBob" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="206" max="-2" attributes="0"/>
+              <Component id="jButtonAliceTransmettre" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+              <Component id="jButtonEveToAliceTransmettre" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+              <Component id="jButtonEveToBobTransmettre" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="106" max="32767" attributes="0"/>
+              <Component id="jButtonBobTransmettre" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
+              <Component id="jButtonCleAlice" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+              <Component id="jButtonCleEveToAlice" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+              <Component id="jButtonCleEveToBob" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jButtonCleBob" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="lNbCommune" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="271" max="-2" attributes="0"/>
+                      <Component id="jNbCommun" min="-2" pref="261" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lNbSecret" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lCleInter" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lNbAmi" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lCle" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jNbSecretAlice" pref="128" max="32767" attributes="0"/>
+                          <Component id="jCleInterAlice" max="32767" attributes="0"/>
+                          <Component id="jNbAmiAlice" max="32767" attributes="0"/>
+                          <Component id="jCleAlice" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jNbSecretEveToAlice" pref="136" max="32767" attributes="0"/>
+                          <Component id="jCleInterEveToAlice" max="32767" attributes="0"/>
+                          <Component id="jNbAmiEveToAlice" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jCleEveToAlice" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jNbSecretEveToBob" pref="138" max="32767" attributes="0"/>
+                          <Component id="jCleInterEveToBob" max="32767" attributes="0"/>
+                          <Component id="jNbAmiEveToBob" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jCleEveToBob" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jNbSecretBob" pref="144" max="32767" attributes="0"/>
+                          <Component id="jCleInterBob" max="32767" attributes="0"/>
+                          <Component id="jNbAmiBob" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jCleBob" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jCleEveToAlice" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jEve" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lNbCommune" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbCommun" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lNbSecret" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbSecretAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbSecretEveToAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbSecretEveToBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbSecretBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jButtonAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonEveToAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonEveToBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jCleInterBob" max="32767" attributes="0"/>
+                                  <Component id="jCleInterEveToBob" max="32767" attributes="0"/>
+                                  <Component id="jCleInterEveToAlice" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lCleInter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCleInterAlice" alignment="1" min="-2" pref="14" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jButtonAliceTransmettre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonEveToAliceTransmettre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonEveToBobTransmettre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonBobTransmettre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="lNbAmi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbAmiAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbAmiEveToAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbAmiEveToBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jNbAmiBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jButtonCleAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonCleEveToAlice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonCleEveToBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButtonCleBob" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lCle" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCleAlice" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jCleEveToBob" min="-2" pref="14" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jCleBob" min="-2" pref="14" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="33" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lNbCommune">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entrer le nombre commun"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lAlice">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Alice"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jEve">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eve"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lBob">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bob"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbCommun">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lNbSecret">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entrer votre nombre secret"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbSecretAlice">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbSecretEveToAlice">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbSecretEveToBob">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbSecretBob">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonAlice">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="G&#xe9;n&#xe9;rer"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAliceActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEveToAlice">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="G&#xe9;n&#xe9;rer"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEveToAliceActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEveToBob">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="G&#xe9;n&#xe9;rer"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEveToBobActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonBob">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="G&#xe9;n&#xe9;rer"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBobActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lCleInter">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Donner ce nombre &#xe0; votre ami"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleInterAlice">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleInterEveToAlice">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleInterEveToBob">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleInterBob">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonAliceTransmettre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transmettre"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonAliceTransmettreActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEveToAliceTransmettre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transmettre"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEveToAliceTransmettreActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonEveToBobTransmettre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transmettre"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonEveToBobTransmettreActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonBobTransmettre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Transmettre"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBobTransmettreActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lNbAmi">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Entrer le nombre de votre ami"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbAmiAlice">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbAmiEveToAlice">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbAmiEveToBob">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jNbAmiBob">
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonCleAlice">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculer"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCleAliceActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonCleEveToAlice">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculer"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCleEveToAliceActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonCleEveToBob">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculer"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCleEveToBobActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButtonCleBob">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculer"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCleBobActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lCle">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Votre cl&#xe9; de cryptage"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleAlice">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleEveToBob">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleEveToAlice">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCleBob">
+    </Component>
+  </SubComponents>
+</Form>

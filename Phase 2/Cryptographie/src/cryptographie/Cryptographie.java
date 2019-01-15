@@ -5,6 +5,7 @@
  */
 package cryptographie;
 
+import cryptographie.DiffieHellman.Attaque_Homme_Milieu;
 import cryptographie.DiffieHellman.Fenetre;
 import cryptographie.Transposition.Cryptage_Transposition;
 import javax.swing.JFrame;
@@ -31,6 +32,12 @@ public class Cryptographie {
         j2.setVisible(true);
         j2.setResizable(false);
         j2.setTitle("Diffie-Hellman");
+        
+        //Attaque de l'homme du milieu
+        JFrame j3 = new Attaque_Homme_Milieu();
+        j3.setVisible(true);
+        j3.setResizable(false);
+        j3.setTitle("Attaque de l'homme du milieu");
     }
     
 }
