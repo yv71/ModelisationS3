@@ -7,7 +7,6 @@ package cryptographie;
 
 import cryptographie.DiffieHellman.Fenetre;
 import cryptographie.Transposition.Cryptage_Transposition;
-import cryptographie.Transposition.Crypteur_Transpo;
 import javax.swing.JFrame;
 
 /**
