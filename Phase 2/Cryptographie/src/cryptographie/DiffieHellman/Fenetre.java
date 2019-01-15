@@ -162,7 +162,7 @@ public class Fenetre extends javax.swing.JFrame {
         this.jNbAmiAlice.setText("");
         this.jNbAmiBob.setText("");
         this.rCleInterAlice.setText("");
-        
+
         if(!this.jNbCommun.getText().isEmpty() && !this.jNbSecretAlice.getText().isEmpty() && !this.jNbSecretBob.getText().isEmpty()){
             if(Double.valueOf(this.jNbCommun.getText())>DiffieHellman.nombrePremier){
                 this.rCleInterAlice.setText("Le nombre commun doit etre <"+formatter.format(DiffieHellman.nombrePremier));
