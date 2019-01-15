@@ -37,6 +37,7 @@ public class Cryptage_Transposition extends javax.swing.JFrame {
         jMessageDecrypte = new javax.swing.JTextField();
         jButtonCrypte = new javax.swing.JButton();
         jButtonDecrypte = new javax.swing.JButton();
+        jButtonClear = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,6 +63,13 @@ public class Cryptage_Transposition extends javax.swing.JFrame {
             }
         });
 
+        jButtonClear.setText("Clear");
+        jButtonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClearActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -81,11 +89,13 @@ public class Cryptage_Transposition extends javax.swing.JFrame {
                     .addComponent(jMessageDecrypte, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE))
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
-                .addGap(239, 239, 239)
+                .addGap(41, 41, 41)
+                .addComponent(jButtonClear)
+                .addGap(125, 125, 125)
                 .addComponent(jButtonCrypte)
                 .addGap(70, 70, 70)
                 .addComponent(jButtonDecrypte)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +119,8 @@ public class Cryptage_Transposition extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCrypte)
-                    .addComponent(jButtonDecrypte))
+                    .addComponent(jButtonDecrypte)
+                    .addComponent(jButtonClear))
                 .addGap(29, 29, 29))
         );
 
@@ -127,6 +138,13 @@ public class Cryptage_Transposition extends javax.swing.JFrame {
             this.jMessageDecrypte.setText(Crypteur_Transpo.decryptage(this.jCle.getText(), this.jMessageCrypte.getText()));
         }
     }//GEN-LAST:event_jButtonDecrypteActionPerformed
+
+    private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
+        this.jCle.setText("");
+        this.jMessage.setText("");
+        this.jMessageCrypte.setText("");
+        this.jMessageDecrypte.setText("");
+    }//GEN-LAST:event_jButtonClearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,6 +182,7 @@ public class Cryptage_Transposition extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonClear;
     private javax.swing.JButton jButtonCrypte;
     private javax.swing.JButton jButtonDecrypte;
     private javax.swing.JTextField jCle;
